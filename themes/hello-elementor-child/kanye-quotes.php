@@ -1,10 +1,11 @@
 <?php
 /* Template Name: Kanye Quotes */
-get_header();
+get_header(); ?>
 
-echo do_shortcode('[show_ip]');
+<main id="content" class="site-main">
+    <h2>Kanye Quotes Page</h2>
 
-
+<?php
 function get_kanye_quotes($num_quotes = 5) {
     $quotes = [];
     for ($i = 0; $i < $num_quotes; $i++) {
@@ -27,6 +28,11 @@ if ($kanye_quotes) :
 else :
     echo 'Unable to retrieve quotes at this time.';
 endif;
+
+?>
+
+</main>
+<?php
 
 get_footer();
 
