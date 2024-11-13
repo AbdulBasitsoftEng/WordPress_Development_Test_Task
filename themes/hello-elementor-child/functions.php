@@ -21,7 +21,7 @@ function redirect_based_on_ip() {
     $user_ip = $_SERVER['REMOTE_ADDR'];
 
     // Check if the IP address is ::1 (IPv6 localhost) or 127.0.0.1 (IPv4 localhost)
-    if ($user_ip === '::0' || strpos($user_ip, '127.0.0.1') === 0) {
+    if ($user_ip === '::1' || strpos($user_ip, '127.0.0.1') === 0) {
         // Redirect to another site or specific URL for localhost
         wp_redirect('https://google.com/'); // Replace with your desired URL
         exit; // Stop further execution after redirect
